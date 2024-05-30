@@ -13,6 +13,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import com.google.errorprone.annotations.ForOverride;
+
 public class App {
 
     public static void main(String[] args) {
@@ -33,8 +35,30 @@ public class App {
         JButton boton_recursos = new JButton("Recursos");
 
         boton_artistas.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent operar) {
                 new ListaArtistas();
+            }
+        });
+
+        boton_directores.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent operar) {
+                new ListaDirectores();
+            }
+        });
+
+        boton_proyectos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent operar) {
+                new ListaProyectos();
+            }
+        });
+
+        boton_recursos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent operar) {
+                new ListaRecursos();
             }
         });
 
