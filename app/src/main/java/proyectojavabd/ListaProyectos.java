@@ -18,8 +18,9 @@ import java.sql.SQLException;
 
 public class ListaProyectos extends JFrame {
     public ListaProyectos() {
+        //Creamos la consulta SQL que usaremos en nuestro metodo.
         String lista_proyectos = "SELECT * FROM proyectos";
-
+        //Creamos la ventana de la lista de proyectos.
         this.setTitle("Lista de Proyectos");
         this.setSize(700, 400);
 
@@ -32,7 +33,7 @@ public class ListaProyectos extends JFrame {
         JScrollPane scroll = new JScrollPane(tabla);
         scroll.setPreferredSize(new Dimension(500, 500));
         modelo.setColumnIdentifiers(new Object[] { "ID", "Titulo", "Descripcion", "FechaInicio", "FechaFinalizacion", "Presupuesto", "Activo", "Director"});
-
+        //Cargamos los datos de los proyectos en la tabla mediante este metodo.
         cargarDatosProyectos(modelo, lista_proyectos);
 
         this.setVisible(true);
@@ -42,12 +43,13 @@ public class ListaProyectos extends JFrame {
 
     public void cargarDatosProyectos(DefaultTableModel modelo, String filtro) {
         try {
+            //Conexion a la base de datos.
             String url = "jdbc:mysql://localhost:3306/bdproyectofinal";
 
             Connection conexion = DriverManager.getConnection(url, "root", "");
             PreparedStatement select = conexion.prepareStatement(filtro);
             java.sql.ResultSet rs = select.executeQuery();
-
+            //While para meter los datos de los proyectos en la tabla.
             while (rs.next()) {
                 modelo.addRow(new Object[] { rs.getInt("ID"), rs.getString("Titulo"), rs.getString("Descripcion"), rs.getString("FechaInicio"),
                 rs.getString("FechaFinalizacion"), rs.getString("Presupuesto"), rs.getString("Activo"), rs.getString("Director")});

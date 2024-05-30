@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
-
+//Basicamente se hacen los mismos pasos que en las otras clases.
 public class ListaRecursos extends JFrame {
     public ListaRecursos() {
         String lista_recursos = "SELECT * FROM recursos";

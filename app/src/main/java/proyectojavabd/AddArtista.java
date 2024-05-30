@@ -22,8 +22,9 @@ import javax.swing.JTextField;
 
 public class AddArtista extends JFrame{
     public AddArtista() {
+        //Conexion a la base de datos.
         String url = "jdbc:mysql://localhost:3306/bdproyectofinal";
-
+        //Creamos la ventana de añadir artista.
         this.setTitle("Añadir Artista");
         this.setSize(500, 600);
 
@@ -48,12 +49,12 @@ public class AddArtista extends JFrame{
         JTextField id_proyecto_texto = new JTextField();
 
         JButton boton_anyadir_artista = new JButton("Añadir Artista");
-
+        //Al pulsar este boton se extraen los datos de los textfields y se añaden a la base de datos.
         boton_anyadir_artista.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent operar) {
                 try {
-
+                    //extraemos los datos de los textfields.
                     String nombreArtista = nombre_texto.getText();
                     String apellidosArtista = apellidos_texto.getText();
                     String especialidadArtista = especialidad_texto.getText();
@@ -61,7 +62,7 @@ public class AddArtista extends JFrame{
                     String idProyectoArtista = id_proyecto_texto.getText();
                     int anyosExp = Integer.parseInt(anyosExpArtista);
                     int idProyecto = Integer.parseInt(idProyectoArtista);
-        
+                    //Hacemos la conexion y el insert.
                     Connection conexion = DriverManager.getConnection(url, "root", "");
                     PreparedStatement insert = conexion.prepareStatement("INSERT INTO Artistas (Nombre, Apellidos, Especialidad, AnyosExp, ID_Proyecto) VALUES (?, ?, ?, ?, ?)");
 
