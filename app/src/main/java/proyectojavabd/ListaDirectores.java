@@ -8,7 +8,6 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
 import java.awt.Dimension;
-import javax.swing.JButton;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

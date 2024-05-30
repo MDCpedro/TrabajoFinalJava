@@ -33,14 +33,14 @@ public class ListaRecursos extends JFrame {
         scroll.setPreferredSize(new Dimension(500, 500));
         modelo.setColumnIdentifiers(new Object[] { "ID", "ID_Proyecto", "Nombre", "Tipo", "FechaAsignacion", "Precio"});
 
-        cargarDatosProyectos(modelo, lista_recursos);
+        cargarDatosRecursos(modelo, lista_recursos);
 
         this.setVisible(true);
         this.add(panel);
         this.add(scroll);
     }
 
-    public void cargarDatosProyectos(DefaultTableModel modelo, String filtro) {
+    public void cargarDatosRecursos(DefaultTableModel modelo, String filtro) {
         try {
             String url = "jdbc:mysql://localhost:3306/bdproyectofinal";
 
