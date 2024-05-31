@@ -40,11 +40,11 @@ public class ListaArtistas extends JFrame {
         JTable tabla = new JTable(modelo);
         JScrollPane scroll = new JScrollPane(tabla);
         scroll.setPreferredSize(new Dimension(500, 500));
-        modelo.setColumnIdentifiers(new String[] { "ID", "Nombre", "Apellidos", "Especialidad", "AñosExp", "ID_Proyecto"});
+        modelo.setColumnIdentifiers(new String[] { "ID", "Nombre", "Apellidos", "Especialidad", "A�osExp", "ID_Proyecto"});
 
-        JButton boton_anyadir_artistas = new JButton("Añadir Artista");
+        JButton boton_anyadir_artistas = new JButton("A�adir Artista");
         JButton refrescar_tabla = new JButton("Refrescar Tabla");
-        JButton ordenar_anyos_exp = new JButton("Ordenar por Años de Experiencia");
+        JButton ordenar_anyos_exp = new JButton("Ordenar por A�os de Experiencia");
         //Cargamos los datos de los artistas en la tabla mediante este metodo.
         cargarDatosArtistas(modelo, lista_artistas_default);
         //Añadimos listeners a los botones.

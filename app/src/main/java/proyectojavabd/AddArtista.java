@@ -25,7 +25,7 @@ public class AddArtista extends JFrame{
         //Conexion a la base de datos.
         String url = "jdbc:mysql://localhost:3306/bdproyectofinal";
         //Creamos la ventana de añadir artista.
-        this.setTitle("Añadir Artista");
+        this.setTitle("A�adir Artista");
         this.setSize(500, 600);
 
         JPanel panel = new JPanel();
@@ -42,13 +42,13 @@ public class AddArtista extends JFrame{
         JLabel especialidad = new JLabel("Especialidad");
         JTextField especialidad_texto = new JTextField();
 
-        JLabel anyos_exp = new JLabel("Años de experiencia");
+        JLabel anyos_exp = new JLabel("A�os de experiencia");
         JTextField anyos_exp_texto = new JTextField();
 
         JLabel id_proyecto = new JLabel("ID Proyecto");
         JTextField id_proyecto_texto = new JTextField();
 
-        JButton boton_anyadir_artista = new JButton("Añadir Artista");
+        JButton boton_anyadir_artista = new JButton("A�adir Artista");
         //Al pulsar este boton se extraen los datos de los textfields y se añaden a la base de datos.
         boton_anyadir_artista.addActionListener(new ActionListener() {
             @Override
@@ -73,16 +73,16 @@ public class AddArtista extends JFrame{
                     insert.setInt(5, idProyecto);
 
                     insert.executeUpdate();
-                    JOptionPane.showMessageDialog(null, "Artista añadido correctamente");
+                    JOptionPane.showMessageDialog(null, "Artista A�adido correctamente");
                     insert.close();
                     conexion.close();
                 
         
                 } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, "Error al añadir el artista. Quizas el ID del proyecto no existe");
+                    JOptionPane.showMessageDialog(null, "Error al ��dir el artista. Quizas el ID del proyecto no existe");
                 } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(null, "Introduce valores validos (Solo numeros en años de experiencia y ID Proyecto)");
-                }
+                    JOptionPane.showMessageDialog(null, "Introduce valores validos (Solo numeros en A�os de experiencia y ID Proyecto)");
+                } 
         
             }
         });
