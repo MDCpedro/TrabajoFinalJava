@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"proyectojavabd","l":"AddArtista"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"proyectojavabd","l":"App"},{"p":"proyectojavabd","l":"ListaArtistas"},{"p":"proyectojavabd","l":"ListaDirectores"},{"p":"proyectojavabd","l":"ListaProyectos"},{"p":"proyectojavabd","l":"ListaRecursos"}];updateSearchResults();
