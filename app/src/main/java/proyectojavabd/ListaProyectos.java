@@ -15,8 +15,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
-
+//Clase de listaProyectos.
 public class ListaProyectos extends JFrame {
+//Ventana de lista de proyectos.
     public ListaProyectos() {
         //Creamos la consulta SQL que usaremos en nuestro metodo.
         String lista_proyectos = "SELECT * FROM proyectos";
@@ -40,7 +41,7 @@ public class ListaProyectos extends JFrame {
         this.add(panel);
         this.add(scroll);
     }
-
+//Metodo que carga los datos de los proyectos en la tabla.
     public void cargarDatosProyectos(DefaultTableModel modelo, String filtro) {
         try {
             //Conexion a la base de datos.

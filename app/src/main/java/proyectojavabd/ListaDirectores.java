@@ -14,8 +14,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
-
+//Clase de listaDirectores.
 public class ListaDirectores extends JFrame {
+//Ventana de lista de directores.
     public ListaDirectores() {
         //Creamos la consulta SQL que usaremos en nuestro metodo.
         String lista_directores_default = "SELECT * FROM Directores";

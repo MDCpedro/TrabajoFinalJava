@@ -19,8 +19,9 @@ import javax.swing.JButton;
 import java.sql.SQLException;
 import javax.swing.JTextField;
 
-
+//Clase de añadir artistas.
 public class AddArtista extends JFrame{
+    //Ventana de añadir artista.
     public AddArtista() {
         //Conexion a la base de datos.
         String url = "jdbc:mysql://localhost:3306/bdproyectofinal";

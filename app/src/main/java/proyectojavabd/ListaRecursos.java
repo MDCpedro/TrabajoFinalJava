@@ -39,7 +39,7 @@ public class ListaRecursos extends JFrame {
         this.add(panel);
         this.add(scroll);
     }
-
+//Metodo que carga los datos de los recursos en la tabla.
     public void cargarDatosRecursos(DefaultTableModel modelo, String filtro) {
         try {
             String url = "jdbc:mysql://localhost:3306/bdproyectofinal";

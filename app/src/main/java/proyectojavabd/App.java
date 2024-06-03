@@ -14,9 +14,9 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import com.google.errorprone.annotations.ForOverride;
-
+//Clase principal.
 public class App {
-
+//Main
     public static void main(String[] args) {
         // Creamos la ventana principal
         JFrame frame = new JFrame("Gestor de Empresa");

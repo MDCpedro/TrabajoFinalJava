@@ -21,9 +21,9 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import static java.lang.String.valueOf;
-
+//Clase de listaArtistas.
 public class ListaArtistas extends JFrame {
-    
+//Ventana de lista de artistas.
     public ListaArtistas() {
         //Creamos las consultas SQL que usaremos en nuestro metodo.
         String lista_artistas_default = "SELECT * FROM Artistas";
@@ -40,11 +40,11 @@ public class ListaArtistas extends JFrame {
         JTable tabla = new JTable(modelo);
         JScrollPane scroll = new JScrollPane(tabla);
         scroll.setPreferredSize(new Dimension(500, 500));
-        modelo.setColumnIdentifiers(new String[] { "ID", "Nombre", "Apellidos", "Especialidad", "A�osExp", "ID_Proyecto"});
+        modelo.setColumnIdentifiers(new String[] { "ID", "Nombre", "Apellidos", "Especialidad", "AñosExp", "ID_Proyecto"});
 
-        JButton boton_anyadir_artistas = new JButton("A�adir Artista");
+        JButton boton_anyadir_artistas = new JButton("Añadir Artista");
         JButton refrescar_tabla = new JButton("Refrescar Tabla");
-        JButton ordenar_anyos_exp = new JButton("Ordenar por A�os de Experiencia");
+        JButton ordenar_anyos_exp = new JButton("Ordenar por Años de Experiencia");
         //Cargamos los datos de los artistas en la tabla mediante este metodo.
         cargarDatosArtistas(modelo, lista_artistas_default);
         //Añadimos listeners a los botones.
@@ -78,6 +78,7 @@ public class ListaArtistas extends JFrame {
         panel.add(boton_anyadir_artistas);
         this.pack();
     }
+    
     //Metodo para cargar los datos de los artistas en la tabla.
     public void cargarDatosArtistas(DefaultTableModel modelo, String filtro) {
         try {
